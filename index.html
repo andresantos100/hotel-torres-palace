@@ -1,0 +1,345 @@
+<!doctype html>
+<!--
+  Torres Palace Hotel · Grajaú – MA · claude_v2, no Padrão Hotéis MA.
+  VERSÃO DE APRESENTAÇÃO para o dono do hotel.
+
+  Fontes (pesquisadas em 25/11/2026):
+  - Instagram oficial @torrespalacehotel: endereço, CEP, e-mail, WhatsApp (99) 99154-6331, telefone (99) 98145-2055,
+    tipos de quarto (Suíte Master, Família Master, Casal Master) e serviços (café da manhã, elevador social,
+    ar-condicionado, TV, frigobar, estacionamento, Wi-Fi, chuveiro quente, recepção 24h). Todas as fotos vêm de lá.
+  - Tripadvisor: nota 3,7 (24 avaliações). Fica fora do site: o padrão só mostra nota a partir de 4,2.
+  - Booking: o hotel não aparece listado.
+  - Atrações: Buser (guia de pontos turísticos de Grajaú) e material da UFMA sobre o município.
+
+  PENDENTE confirmar com o hotel: horários de check-in e check-out, capacidade de cada quarto,
+  se Wi-Fi e estacionamento são grátis, e o link exato da ficha no Google Maps.
+  Antes de publicar de verdade: pedir as fotos originais em alta resolução.
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torres Palace Hotel | Grajaú – MA</title>
+  <meta name="description" content="Hotel na BR-226, km 215, em Grajaú (MA). Recepção 24h, café da manhã, estacionamento e elevador. Reserve pelo WhatsApp." />
+  <meta name="theme-color" content="#14335a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Torres Palace Hotel · Grajaú – MA" />
+  <meta property="og:description" content="Na BR-226, com recepção 24h, café da manhã e estacionamento. Reserve direto pelo WhatsApp." />
+  <meta property="og:image" content="fotos/compartilhar.webp" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231f4f8a'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='700' font-size='24' fill='white' text-anchor='middle'%3ETP%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="padrao-hoteis-ma.css" />
+  <!-- Cor do hotel: combinação "Azul colonial" do padrão, próxima do azul do logo -->
+  <style>
+    :root{--marca:#1f4f8a;--marca-escura:#14335a;--marca-clara:#e6edf6}
+    .hm-topo__foto img{object-position:65% center}
+    .hm-atracao .hm-icone-caixa{margin-bottom:var(--space-1)}
+  </style>
+  <link rel="preload" as="image" href="fotos/topo-fachada.webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Torres Palace Hotel",
+    "image": ["fotos/topo-fachada.webp", "fotos/vista-aerea.webp"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rodovia BR-226, km 215, nº 998, Canoeiro",
+      "addressLocality": "Grajaú",
+      "addressRegion": "MA",
+      "postalCode": "65940-000",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 99 99154-6331",
+    "email": "torrespalacehotel@hotmail.com",
+    "sameAs": ["https://www.instagram.com/torrespalacehotel/", "https://www.tripadvisor.com.br/Hotel_Review-g2344269-d6363741-Reviews-Torres_Palace_Hotel-Grajau_State_of_Maranhao.html"],
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Recepção 24 horas", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Café da manhã", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Estacionamento", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Elevador", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Ar-condicionado", "value": true}
+    ]
+  }
+  </script>
+</head>
+<body class="hm">
+  <a class="hm-pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Ícones (traço 1.8, 24×24) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c.3 2 2.2 4 4.5 4.6"/></symbol>
+    <symbol id="i-telefone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-cafe" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3"/></symbol>
+    <symbol id="i-recepcao" viewBox="0 0 24 24"><path d="M4 17h16M6 17a6 6 0 0 1 12 0M12 8v3M10 8h4M3 20h18"/></symbol>
+    <symbol id="i-estacionamento" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></symbol>
+    <symbol id="i-elevador" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 3v18M7 11l1.5-2 1.5 2M14 13l1.5 2 1.5-2"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r=".8"/></symbol>
+    <symbol id="i-ar" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5"/></symbol>
+    <symbol id="i-frigobar" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M6 10h12M9 5v2M9 13v3"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-pessoa" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-pino" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-igreja" viewBox="0 0 24 24"><path d="M12 2v4M10 4h4M7 21V11l5-4 5 4v10M4 21h16M10 21v-4a2 2 0 0 1 4 0v4"/></symbol>
+    <symbol id="i-agua" viewBox="0 0 24 24"><path d="M2 16c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 20c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M12 3s4 4.5 4 7a4 4 0 0 1-8 0c0-2.5 4-7 4-7z"/></symbol>
+    <symbol id="i-cachoeira" viewBox="0 0 24 24"><path d="M3 4h18M7 4v11M12 4v13M17 4v11M3 20c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/></symbol>
+  </svg>
+
+  <!-- 1. Cabeçalho -->
+  <header class="hm-cabecalho">
+    <div class="hm-wrap hm-cabecalho__linha">
+      <a class="hm-marca" href="#inicio">
+        <span class="hm-monograma" aria-hidden="true">TP</span>
+        <span>Torres Palace Hotel<small>GRAJAÚ · MA</small></span>
+      </a>
+      <nav class="hm-menu" aria-label="Seções">
+        <a href="#quartos">Quartos</a>
+        <a href="#comodidades">Estrutura</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#atracoes">Grajaú</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="hm-btn hm-btn--whatsapp" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener">
+        <svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="hm-wrap">
+      <!-- 2. Topo -->
+      <section class="hm-topo" id="inicio" aria-labelledby="titulo-topo">
+        <div class="hm-topo__foto">
+          <img src="fotos/topo-fachada.webp" alt="Fachada do Torres Palace Hotel ao entardecer, com o letreiro azul aceso na entrada" fetchpriority="high">
+        </div>
+        <div class="hm-topo__conteudo">
+          <p class="hm-rotulo">BR-226 · Grajaú – MA</p>
+          <h1 id="titulo-topo">Hotel na BR-226 com recepção 24 horas</h1>
+          <p>Café da manhã, estacionamento e elevador em Grajaú. Chegue a qualquer hora, a recepção está aberta.</p>
+          <div class="hm-acoes">
+            <a class="hm-btn hm-btn--whatsapp" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener">
+              <svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>Reservar pelo WhatsApp
+            </a>
+            <a class="hm-btn hm-btn--claro" href="#contato">
+              <svg class="hm-icone" aria-hidden="true"><use href="#i-pino"/></svg>Como chegar
+            </a>
+          </div>
+          <p class="hm-garantia">Reserva direta com o hotel, sem intermediário.</p>
+        </div>
+      </section>
+
+      <!-- 3. Fatos rápidos -->
+      <div class="hm-fatos" role="list">
+        <div class="hm-fato" role="listitem"><span class="hm-rotulo">Recepção</span><strong>24h</strong></div>
+        <div class="hm-fato" role="listitem"><span class="hm-rotulo">Incluso</span><strong class="hm-fato__texto">Café da manhã</strong></div>
+        <div class="hm-fato" role="listitem"><span class="hm-rotulo">Estacionamento</span><strong class="hm-fato__texto">No hotel</strong></div>
+        <div class="hm-fato" role="listitem"><span class="hm-rotulo">WhatsApp</span><strong class="hm-fato__texto"><a href="https://wa.me/5599991546331" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." target="_blank" rel="noopener">(99) 99154-6331</a></strong></div>
+      </div>
+
+      <!-- Consulta pelo WhatsApp -->
+      <form class="hm-consulta" id="consulta">
+        <p class="hm-consulta__titulo">Consultar disponibilidade</p>
+        <div class="hm-campo-grupo"><label for="entrada">Entrada</label><input class="hm-campo" type="date" id="entrada" name="entrada" required></div>
+        <div class="hm-campo-grupo"><label for="saida">Saída</label><input class="hm-campo" type="date" id="saida" name="saida" required></div>
+        <div class="hm-campo-grupo"><label for="quarto">Quarto</label>
+          <select class="hm-campo" id="quarto" name="quarto"><option>Casal Master</option><option>Família Master</option><option>Suíte Master</option><option>Ainda não sei</option></select>
+        </div>
+        <button class="hm-btn hm-btn--whatsapp" type="submit"><svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>Consultar no WhatsApp</button>
+        <p class="hm-consulta__nota hm-pequeno">Abre o WhatsApp com a mensagem pronta. O hotel responde com o valor e a disponibilidade.</p>
+      </form>
+    </div>
+
+    <!-- 4. Quartos -->
+    <section class="hm-secao" id="quartos" aria-labelledby="titulo-quartos">
+      <div class="hm-wrap">
+        <div class="hm-secao__cabeca">
+          <p class="hm-rotulo">Hospedagem</p>
+          <h2 class="hm-titulo-secao" id="titulo-quartos">Nossos quartos</h2>
+          <p>Todos com ar-condicionado, TV, frigobar e chuveiro quente.</p>
+        </div>
+        <div class="hm-grade">
+          <article class="hm-quarto">
+            <div class="hm-foto"><img src="fotos/casal-master.webp" alt="Quarto Casal Master com cama de casal e toalhas dobradas" loading="lazy"></div>
+            <div class="hm-quarto__corpo">
+              <h3>Casal Master</h3>
+              <span class="hm-capacidade"><svg class="hm-icone" aria-hidden="true"><use href="#i-pessoa"/></svg>2 pessoas · cama de casal</span>
+              <ul class="hm-etiquetas"><li>Ar-condicionado</li><li>TV</li><li>Frigobar</li></ul>
+              <a class="hm-btn hm-btn--whatsapp" data-wa="Olá! Gostaria de consultar o quarto Casal Master no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener"><svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>Consultar este quarto</a>
+            </div>
+          </article>
+          <article class="hm-quarto">
+            <div class="hm-foto"><img src="fotos/familia-master.webp" alt="Quarto Família Master com várias camas" loading="lazy"></div>
+            <div class="hm-quarto__corpo">
+              <h3>Família Master</h3>
+              <span class="hm-capacidade"><svg class="hm-icone" aria-hidden="true"><use href="#i-pessoa"/></svg>Para famílias · mais de uma cama</span>
+              <ul class="hm-etiquetas"><li>Ar-condicionado</li><li>TV</li><li>Frigobar</li></ul>
+              <a class="hm-btn hm-btn--whatsapp" data-wa="Olá! Gostaria de consultar o quarto Família Master no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener"><svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>Consultar este quarto</a>
+            </div>
+          </article>
+          <article class="hm-quarto">
+            <div class="hm-foto"><img src="fotos/suite-master.webp" alt="Suíte Master com cama de casal, puff e piso branco" loading="lazy"></div>
+            <div class="hm-quarto__corpo">
+              <h3>Suíte Master</h3>
+              <span class="hm-capacidade"><svg class="hm-icone" aria-hidden="true"><use href="#i-pessoa"/></svg>Casal · nosso quarto mais amplo</span>
+              <ul class="hm-etiquetas"><li>Ar-condicionado</li><li>TV</li><li>Frigobar</li></ul>
+              <a class="hm-btn hm-btn--whatsapp" data-wa="Olá! Gostaria de consultar a Suíte Master no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener"><svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>Consultar este quarto</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Comodidades -->
+    <section class="hm-secao hm-secao--superficie" id="comodidades" aria-labelledby="titulo-comodidades">
+      <div class="hm-wrap">
+        <div class="hm-secao__cabeca">
+          <p class="hm-rotulo">Estrutura</p>
+          <h2 class="hm-titulo-secao" id="titulo-comodidades">O que você encontra</h2>
+        </div>
+        <ul class="hm-comodidades">
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-recepcao"/></svg></span>Recepção 24h</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-cafe"/></svg></span>Café da manhã</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-estacionamento"/></svg></span>Estacionamento</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-elevador"/></svg></span>Elevador social</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-wifi"/></svg></span>Wi-Fi</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-ar"/></svg></span>Ar-condicionado</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-frigobar"/></svg></span>Frigobar</li>
+          <li class="hm-comodidade"><span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-tv"/></svg></span>TV no quarto</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. Fotos -->
+    <section class="hm-secao" id="fotos" aria-labelledby="titulo-fotos">
+      <div class="hm-wrap">
+        <div class="hm-secao__cabeca">
+          <p class="hm-rotulo">Fotos</p>
+          <h2 class="hm-titulo-secao" id="titulo-fotos">Conheça o hotel</h2>
+        </div>
+        <div class="hm-galeria">
+          <figure><div class="hm-foto"><img src="fotos/vista-aerea.webp" alt="Vista aérea do prédio do Torres Palace Hotel e do estacionamento" loading="lazy"></div><figcaption>Vista do hotel</figcaption></figure>
+          <figure><div class="hm-foto"><img src="fotos/recepcao.webp" alt="Balcão da recepção" loading="lazy"></div><figcaption>Recepção 24h</figcaption></figure>
+          <figure><div class="hm-foto"><img src="fotos/hall.webp" alt="Hall de entrada com sofá de couro e corredor" loading="lazy"></div><figcaption>Hall</figcaption></figure>
+          <figure><div class="hm-foto"><img src="fotos/apartamento.webp" alt="Apartamento com cama de casal, arara e TV" loading="lazy"></div><figcaption>Apartamento</figcaption></figure>
+          <figure><div class="hm-foto"><img src="fotos/quarto-casal-2.webp" alt="Quarto com cama de casal, estante e TV" loading="lazy"></div><figcaption>Quarto casal</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Avaliações: fora. Tripadvisor 3,7 (24 avaliações), abaixo do mínimo de 4,2 do padrão. -->
+
+    <!-- 9. Atrações (até 3) -->
+    <section class="hm-secao hm-secao--superficie" id="atracoes" aria-labelledby="titulo-atracoes">
+      <div class="hm-wrap">
+        <div class="hm-secao__cabeca">
+          <p class="hm-rotulo">Grajaú</p>
+          <h2 class="hm-titulo-secao" id="titulo-atracoes">O que conhecer na cidade</h2>
+        </div>
+        <div class="hm-grade">
+          <article class="hm-quarto hm-atracao">
+            <div class="hm-quarto__corpo">
+              <span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-igreja"/></svg></span>
+              <h3>Igreja Nosso Senhor do Bonfim</h3>
+              <span class="hm-capacidade">No centro de Grajaú</span>
+              <p>O cartão-postal religioso da cidade, sede da paróquia do Bonfim.</p>
+            </div>
+          </article>
+          <article class="hm-quarto hm-atracao">
+            <div class="hm-quarto__corpo">
+              <span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-agua"/></svg></span>
+              <h3>Balneário Canecão</h3>
+              <span class="hm-capacidade">Às margens do Rio Grajaú</span>
+              <p>Banho de rio, o programa mais procurado pelos moradores no verão.</p>
+            </div>
+          </article>
+          <article class="hm-quarto hm-atracao">
+            <div class="hm-quarto__corpo">
+              <span class="hm-icone-caixa"><svg class="hm-icone" aria-hidden="true"><use href="#i-cachoeira"/></svg></span>
+              <h3>Cachoeira do Morcego</h3>
+              <span class="hm-capacidade">Cerca de 28 km, pela MA-006</span>
+              <p>Cachoeira na zona rural, para um dia de trilha e banho. Vá de dia e evite o período de chuva.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Localização e contato -->
+    <section class="hm-secao" id="contato" aria-labelledby="titulo-contato">
+      <div class="hm-wrap">
+        <div class="hm-secao__cabeca">
+          <p class="hm-rotulo">Localização</p>
+          <h2 class="hm-titulo-secao" id="titulo-contato">Como chegar e falar com a gente</h2>
+          <p>Na BR-226, km 215, no bairro Canoeiro. Fácil para quem chega de carro ou de ônibus pela rodovia.</p>
+        </div>
+        <div class="hm-local">
+          <div class="hm-mapa">
+            <iframe title="Mapa do Torres Palace Hotel em Grajaú" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Torres%20Palace%20Hotel%2C%20BR-226%2C%20Graja%C3%BA%20MA&z=15&output=embed"></iframe>
+          </div>
+          <div class="hm-contato">
+            <h3>Torres Palace Hotel</h3>
+            <dl>
+              <div><dt>Endereço</dt><dd>Rodovia BR-226, km 215, nº 998 · Canoeiro<br>Grajaú – MA · 65940-000</dd></div>
+              <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5599991546331" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." target="_blank" rel="noopener">(99) 99154-6331</a></dd></div>
+              <div><dt>Outro telefone</dt><dd><a href="tel:+5599981452055">(99) 98145-2055</a></dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:torrespalacehotel@hotmail.com">torrespalacehotel@hotmail.com</a></dd></div>
+              <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/torrespalacehotel/" target="_blank" rel="noopener">@torrespalacehotel</a></dd></div>
+            </dl>
+            <a class="hm-btn hm-btn--whatsapp hm-btn--bloco" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener">
+              <svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>Falar no WhatsApp
+            </a>
+            <a class="hm-btn hm-btn--claro hm-btn--bloco" href="https://maps.app.goo.gl/svK2cf4d1yaxeMfq6" target="_blank" rel="noopener">
+              <svg class="hm-icone" aria-hidden="true"><use href="#i-pino"/></svg>Abrir no Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. Rodapé -->
+  <div class="hm-wrap">
+    <footer class="hm-rodape">
+      <div>
+        <strong>Torres Palace Hotel</strong>
+        <p>Rodovia BR-226, km 215, nº 998 · Canoeiro · Grajaú – MA · 65940-000</p>
+        <p><a href="https://wa.me/5599991546331" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." target="_blank" rel="noopener">WhatsApp (99) 99154-6331</a> · <a href="tel:+5599981452055">(99) 98145-2055</a></p>
+      </div>
+      <div>
+        <p>Informações atualizadas em novembro de 2026.</p>
+        <p>Site por Integra Digital</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Barra fixa do celular -->
+  <nav class="hm-barra" aria-label="Reservar">
+    <a class="hm-btn hm-btn--whatsapp" data-wa="Olá! Gostaria de consultar disponibilidade no Torres Palace Hotel." href="https://wa.me/5599991546331" target="_blank" rel="noopener">
+      <svg class="hm-icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp
+    </a>
+    <a class="hm-btn hm-btn--linha" href="https://maps.app.goo.gl/svK2cf4d1yaxeMfq6" target="_blank" rel="noopener">
+      <svg class="hm-icone" aria-hidden="true"><use href="#i-pino"/></svg>Como chegar
+    </a>
+  </nav>
+
+  <script>
+    const HOTEL = { nome: "Torres Palace Hotel", whatsapp: "5599991546331" };
+    const wa = (msg) => "https://wa.me/" + HOTEL.whatsapp + "?text=" + encodeURIComponent(msg);
+    document.querySelectorAll("[data-wa]").forEach((a) => { a.href = wa(a.dataset.wa); });
+
+    const form = document.getElementById("consulta");
+    const hoje = new Date().toISOString().slice(0, 10);
+    form.entrada.min = hoje; form.saida.min = hoje;
+    form.entrada.addEventListener("change", () => { form.saida.min = form.entrada.value; });
+    const br = (d) => d.split("-").reverse().join("/");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const msg = `Olá! Gostaria de consultar disponibilidade no ${HOTEL.nome}.\nEntrada: ${br(form.entrada.value)}\nSaída: ${br(form.saida.value)}\nQuarto: ${form.quarto.value}`;
+      window.open(wa(msg), "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>

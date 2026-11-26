@@ -1,0 +1,209 @@
+/* =====================================================================
+   Padrão Hotéis MA · v1 (novembro de 2026)
+   Guia completo: https://claude.ai/artifact/9Ym2Dyk84AH2QQRmU3KvYR
+
+   Para um hotel novo, troque SÓ as três cores de marca abaixo.
+   Combinações testadas (marca / marca-escura / marca-clara):
+     Petróleo (padrão)  #1d5c63 / #123c41 / #e4efef
+     Azul colonial      #1f4f8a / #14335a / #e6edf6
+     Terracota          #9a4a2a / #5e2c19 / #f5e9e3
+     Verde babaçu       #3d6b35 / #264322 / #e9f0e6
+     Vinho              #7a2d3c / #4b1b25 / #f3e6e9
+   ===================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root{
+  /* Cor do hotel (a única coisa que muda) */
+  --marca:#1d5c63;
+  --marca-escura:#123c41;
+  --marca-clara:#e4efef;
+
+  /* Fixas */
+  --whatsapp:#0f7a45;
+  --nota:#a8741a;
+  --tinta:#17242b;
+  --texto-suave:#55646b;
+  --fundo:#ffffff;
+  --superficie:#f4f6f6;
+  --linha:#dde4e5;
+  --branco:#ffffff;
+  --foco:#c47a00;
+
+  --font-sans:Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;
+  --space-5:24px;--space-6:32px;--space-7:48px;--space-8:80px;
+
+  --radius-sm:6px;--radius-md:10px;--radius-lg:16px;--radius-pill:999px;
+  --sombra-cartao:0 8px 24px rgba(23,36,43,.08);
+
+  --toque-minimo:48px;
+  --largura-conteudo:1120px;
+  --largura-texto:640px;
+}
+
+/* ---------- Base da página ---------- */
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0}
+.hm{font-family:var(--font-sans);color:var(--tinta);font-size:17px;line-height:27px;background:var(--fundo);-webkit-font-smoothing:antialiased}
+.hm *,.hm *::before,.hm *::after{box-sizing:border-box}
+:where(.hm) a{color:inherit}
+.hm img{display:block;max-width:100%}
+.hm-wrap{width:min(var(--largura-conteudo),100% - 32px);margin-inline:auto}
+.hm-secao{padding:var(--space-8) 0}
+.hm-secao--superficie{background:var(--superficie)}
+.hm-secao__cabeca{display:grid;gap:var(--space-2);max-width:var(--largura-texto);margin-bottom:var(--space-6)}
+.hm-secao__cabeca p{margin:0;color:var(--texto-suave)}
+.hm-pular{position:absolute;left:-9999px;top:8px;z-index:30;background:var(--fundo);padding:12px 16px;border-radius:var(--radius-md)}
+.hm-pular:focus{left:8px}
+
+.hm-rotulo{font-size:12px;line-height:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave);margin:0}
+.hm-titulo-secao{font-size:32px;line-height:38px;font-weight:800;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.hm-pequeno{font-size:14px;line-height:20px;color:var(--texto-suave)}
+.hm-icone{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Botões ---------- */
+.hm-btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:var(--toque-minimo);padding:0 20px;border-radius:var(--radius-md);border:1px solid transparent;font:700 15px/1 var(--font-sans);text-decoration:none;cursor:pointer;white-space:nowrap}
+.hm-btn:focus-visible,.hm-campo:focus-visible,.hm-link:focus-visible,.hm-menu a:focus-visible,.hm-marca:focus-visible,.hm-faq summary:focus-visible{outline:3px solid var(--foco);outline-offset:2px}
+.hm-btn--whatsapp{background:var(--whatsapp);color:var(--branco)}
+.hm-btn--marca{background:var(--marca);color:var(--branco)}
+.hm-btn--linha{background:var(--fundo);color:var(--marca);border-color:var(--linha)}
+.hm-btn--claro{background:var(--branco);color:var(--marca-escura)}
+.hm-btn--bloco{width:100%}
+.hm-btn:hover{filter:brightness(1.08)}
+.hm-link{color:var(--marca);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- 1. Cabeçalho ---------- */
+.hm-cabecalho{position:sticky;top:0;z-index:20;background:var(--fundo);border-bottom:1px solid var(--linha)}
+.hm-cabecalho__linha{display:flex;align-items:center;justify-content:space-between;gap:var(--space-5);min-height:72px}
+.hm-marca{display:flex;align-items:center;gap:var(--space-3);text-decoration:none;font-weight:800;font-size:17px;line-height:20px}
+.hm-marca small{display:block;font-size:12px;font-weight:600;color:var(--texto-suave);letter-spacing:.06em}
+.hm-marca img{height:44px;width:auto}
+.hm-monograma{width:44px;height:44px;border-radius:var(--radius-pill);display:grid;place-items:center;background:var(--marca);color:var(--branco);font-weight:800;font-size:16px;letter-spacing:.02em;flex:none}
+.hm-menu{display:flex;align-items:center;gap:var(--space-5);font-size:15px;font-weight:600}
+.hm-menu a{text-decoration:none;min-height:var(--toque-minimo);display:inline-flex;align-items:center}
+.hm-menu a:hover{color:var(--marca)}
+
+/* ---------- 2. Topo ---------- */
+.hm-topo{position:relative;color:var(--branco);background:var(--marca-escura);border-radius:var(--radius-lg);overflow:hidden;padding:96px var(--space-7) 112px;margin-top:var(--space-5)}
+.hm-topo__foto{position:absolute;inset:0;background:repeating-linear-gradient(135deg,var(--marca) 0 18px,var(--marca-escura) 18px 36px);opacity:.55}
+.hm-topo__foto img{width:100%;height:100%;object-fit:cover}
+.hm-topo__foto:has(img){opacity:1}
+.hm-topo__foto:has(img)::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--marca-escura) 0%,color-mix(in srgb,var(--marca-escura) 78%,transparent) 50%,color-mix(in srgb,var(--marca-escura) 20%,transparent) 100%)}
+.hm-topo__foto span{position:absolute;right:16px;top:12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.hm-topo__conteudo{position:relative;max-width:600px;display:grid;gap:var(--space-4)}
+.hm-topo .hm-rotulo{color:var(--marca-clara)}
+.hm-topo h1{margin:0;font-size:48px;line-height:52px;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.hm-topo p{margin:0;font-size:18px;line-height:28px;max-width:480px}
+.hm-acoes{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-2)}
+.hm-garantia{font-size:14px;line-height:20px;opacity:.92}
+
+/* ---------- 3. Fatos rápidos + consulta ---------- */
+.hm-fatos{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--fundo);border:1px solid var(--linha);border-radius:var(--radius-lg);box-shadow:var(--sombra-cartao);margin:-48px var(--space-5) 0}
+.hm-fato{padding:var(--space-4) var(--space-5);display:grid;gap:2px;border-left:1px solid var(--linha)}
+.hm-fato:first-child{border-left:0}
+.hm-fato strong{font-size:28px;line-height:32px;font-weight:800;font-variant-numeric:tabular-nums}
+.hm-fato strong.hm-fato__texto{font-size:17px;line-height:32px}
+.hm-consulta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:var(--space-3);align-items:end;padding:var(--space-5);background:var(--fundo);border:1px solid var(--linha);border-radius:var(--radius-lg);margin-top:var(--space-5)}
+.hm-consulta[hidden]{display:none}
+.hm-consulta__titulo{grid-column:1/-1;margin:0;font-size:19px;line-height:26px;font-weight:700}
+.hm-campo-grupo{display:grid;gap:6px;min-width:0}
+.hm-campo-grupo label{font-size:14px;font-weight:700}
+.hm-campo{min-height:var(--toque-minimo);width:100%;padding:0 12px;border:1px solid var(--linha);border-radius:var(--radius-sm);background:var(--fundo);color:var(--tinta);font:500 16px var(--font-sans)}
+.hm-consulta__nota{grid-column:1/-1;margin:0}
+
+/* ---------- 4. Quartos ---------- */
+.hm-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-5)}
+.hm-quarto{display:grid;align-content:start;background:var(--fundo);border:1px solid var(--linha);border-radius:var(--radius-lg);overflow:hidden}
+.hm-foto{position:relative;background:var(--superficie);display:grid;place-items:center;color:var(--texto-suave);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;aspect-ratio:4/3;max-width:100%;text-align:center;padding:var(--space-3)}
+.hm-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hm-quarto__corpo{padding:var(--space-5);display:grid;gap:var(--space-3)}
+.hm-quarto__corpo h3{margin:0;font-size:19px;line-height:26px;font-weight:700}
+.hm-quarto__corpo p{margin:0;color:var(--texto-suave);font-size:16px;line-height:24px}
+/* Cartão com botão: o botão fica sempre no pé do cartão */
+.hm-quarto{grid-template-rows:auto 1fr}
+.hm-quarto__corpo:has(> .hm-btn){display:flex;flex-direction:column;align-items:stretch}
+.hm-quarto__corpo > .hm-btn{margin-top:auto}
+.hm-quarto__corpo > .hm-etiquetas{margin-bottom:var(--space-3)}
+.hm-capacidade{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--texto-suave);font-weight:600}
+.hm-etiquetas{display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;list-style:none}
+.hm-etiquetas li{font-size:13px;line-height:18px;font-weight:600;padding:5px 9px;border-radius:var(--radius-sm);background:var(--marca-clara);color:var(--marca-escura)}
+
+/* ---------- 5. Comodidades ---------- */
+.hm-comodidades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-3) var(--space-5);padding:0;margin:0;list-style:none}
+.hm-comodidade{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;font-weight:600;font-size:16px;line-height:22px}
+.hm-icone-caixa{width:44px;height:44px;flex:none;border-radius:var(--radius-md);background:var(--marca-clara);color:var(--marca);display:grid;place-items:center}
+.hm-secao--superficie .hm-icone-caixa{background:var(--fundo)}
+
+/* ---------- 6. Galeria ---------- */
+.hm-galeria{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:var(--space-3)}
+.hm-galeria figure{margin:0;position:relative;border-radius:var(--radius-md);overflow:hidden;background:var(--superficie)}
+.hm-galeria figure:first-child{grid-row:span 2}
+.hm-galeria .hm-foto{aspect-ratio:auto;height:100%}
+.hm-galeria figcaption{position:absolute;left:8px;bottom:8px;padding:3px 8px;border-radius:var(--radius-sm);background:var(--fundo);color:var(--tinta);font-size:13px;font-weight:700}
+
+/* ---------- 7. Avaliações (só com nota boa) ---------- */
+.hm-avaliacao{display:grid;grid-template-columns:auto 1fr;gap:var(--space-5);align-items:center;padding:var(--space-5);border:1px solid var(--linha);border-radius:var(--radius-lg);background:var(--fundo)}
+.hm-avaliacao__nota{display:grid;justify-items:center;gap:2px;padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);background:var(--superficie)}
+.hm-avaliacao__nota strong{font-size:40px;line-height:44px;font-weight:800;color:var(--tinta);font-variant-numeric:tabular-nums}
+.hm-estrelas{color:var(--nota);letter-spacing:2px;font-size:15px}
+.hm-depoimentos{display:grid;gap:var(--space-3);margin:0;padding:0;list-style:none}
+.hm-depoimentos blockquote{margin:0;font-size:16px;line-height:24px}
+.hm-depoimentos cite{display:block;font-style:normal;font-size:13px;color:var(--texto-suave);margin-top:2px}
+
+/* ---------- 8. Perguntas frequentes ---------- */
+.hm-faq{display:grid;gap:var(--space-2);max-width:760px}
+.hm-faq details{border:1px solid var(--linha);border-radius:var(--radius-md);background:var(--fundo);padding:0 var(--space-4)}
+.hm-faq summary{min-height:var(--toque-minimo);display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);cursor:pointer;font-weight:700;list-style:none}
+.hm-faq summary::-webkit-details-marker{display:none}
+.hm-faq summary::after{content:"+";font-size:22px;color:var(--marca)}
+.hm-faq details[open] summary::after{content:"−"}
+.hm-faq p{margin:0 0 var(--space-4);color:var(--texto-suave)}
+
+/* ---------- 10. Localização e contato ---------- */
+.hm-local{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--space-5);align-items:start}
+.hm-mapa{display:grid;gap:var(--space-4)}
+.hm-mapa iframe{width:100%;height:300px;border:0;border-radius:var(--radius-lg);background:var(--superficie)}
+.hm-contato{display:grid;gap:var(--space-5);padding:var(--space-6);border-radius:var(--radius-lg);background:var(--marca-escura);color:var(--branco)}
+.hm-contato h3{margin:0;font-size:19px;line-height:26px}
+.hm-contato dl{margin:0;display:grid;gap:var(--space-4)}
+.hm-contato dt{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.hm-contato dd{margin:2px 0 0;font-weight:700}
+.hm-contato dd a{text-underline-offset:3px}
+.hm-distancias{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.hm-distancias li{display:flex;justify-content:space-between;gap:var(--space-3);padding:var(--space-3) 0;border-bottom:1px solid var(--linha);font-size:16px}
+.hm-distancias li span:last-child{color:var(--texto-suave);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- 11. Rodapé ---------- */
+.hm-rodape{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-5);padding:var(--space-6) var(--space-5);background:var(--marca-escura);color:var(--branco);border-radius:var(--radius-lg);font-size:14px;line-height:22px;margin-bottom:var(--space-5)}
+.hm-rodape strong{font-size:16px}
+.hm-rodape p{margin:0}
+.hm-rodape a{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Barra fixa do celular ---------- */
+.hm-barra{display:none}
+
+@media (max-width:640px){
+  .hm-secao{padding:var(--space-7) 0}
+  .hm-menu{display:none}
+  .hm-cabecalho .hm-btn span{display:none}
+  .hm-cabecalho .hm-btn{padding:0 14px}
+  .hm-topo{padding:48px var(--space-4) 88px;margin-top:var(--space-3)}
+  .hm-topo h1{font-size:34px;line-height:38px}
+  .hm-topo p{font-size:17px;line-height:26px}
+  .hm-titulo-secao{font-size:26px;line-height:32px}
+  .hm-fatos{grid-template-columns:repeat(2,minmax(0,1fr));margin:-40px var(--space-3) 0}
+  .hm-fato{padding:var(--space-3) var(--space-4)}
+  .hm-fato:nth-child(3){border-left:0}
+  .hm-fato:nth-child(n+3){border-top:1px solid var(--linha)}
+  .hm-fato strong{font-size:22px;line-height:28px}
+  .hm-fato strong.hm-fato__texto{font-size:15px;line-height:28px;white-space:nowrap}
+  .hm-consulta,.hm-local,.hm-avaliacao{grid-template-columns:1fr}
+  .hm-comodidades{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hm-galeria{grid-template-columns:1fr 1fr;grid-template-rows:200px 120px 120px}
+  .hm-galeria figure:first-child{grid-column:span 2;grid-row:auto}
+  .hm-galeria figure:nth-child(n+6){display:none}
+  .hm-barra{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);position:fixed;left:0;right:0;bottom:0;z-index:25;padding:var(--space-3) var(--space-3) calc(var(--space-3) + env(safe-area-inset-bottom));background:var(--fundo);border-top:1px solid var(--linha);box-shadow:var(--sombra-cartao)}
+  .hm{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hm *{transition:none!important;animation:none!important}}
